@@ -4,6 +4,10 @@
 
 ***
 
+Get started by reading about our [HTML standards](/html/index.md).
+
+***
+
 You might also be interested in…
 
 - [House House Design Statement](https://github.com/househouse/design-statement)
