@@ -12,7 +12,7 @@ This document borrows philosophies, ideas, and rules from [Google’s HTML Style
 
 All HTML documents should begin by referencing the HTML5 doctype. (We write it all lowercase since the DOCTYPE declaration is not case sensitive.) There’s no reason why documents should be written in anything less than HTML5, therefore `<!doctype html>` should be our default.
 
-```
+```html
 <!doctype html>
 ```
 
@@ -29,7 +29,7 @@ doctype
 
 Use a new line for every block, list or table element and indent every such child element.
 
-```
+```html
 <blockquote>
     <p><em>Space</em>, the final frontier.</p>
 </blockquote>
@@ -61,7 +61,7 @@ ul
 
 Nested elements should be indented with four spaces, not tabs.
 
-```
+```html
 <!-- Recommended: four spaces -->
 <div>
     <p>This is indented with four spaces</p>
@@ -90,7 +90,7 @@ Self-contained elements (e.g. `<meta charset="utf-8"/>`) should always be self-c
 
 If you are writing Jade/Pug, you can omit these instructions since it will be automatically handled by the preprocessor.
 
-```
+```html
 <!-- No -->
 <p>Lorem ipsum dolor sit amet.
 <ul>
@@ -116,7 +116,7 @@ If you are writing Jade/Pug, you can omit these instructions since it will be au
 
 When writing attribute values, always quote their value, even when writing HTML5. Use double quotation marks `"` rather than single quotation marks `'` unless writing Jade/Pug, in which case use single quotation marks `'`.
 
-```
+```html
 <!-- NOT Recommended -->
 <input type=text>
 <a href='/' class='button'></a>
@@ -132,15 +132,14 @@ When writing attribute values, always quote their value, even when writing HTML5
 
 ### Attribute Order
 
+HTML attributes should be listed in an order that puts the most commonly-used attributes first:
 
-> HTML attributes should be listed in an order that puts the most commonly-used attributes first:
->
-> 1. Styling attributes: `class`
-> 2. Name attributes: `id`, `name`
-> 3. Custom attributes: `data-*`
-> 4. Connection attributes: `src`, `for`, `type`, `href`, `value`
-> 5. Auxiliary attributes: `title`, `alt`
-> 6. Accessibility attributes: `aria`, `role`
+1. Styling attributes: `class`
+2. Name attributes: `id`, `name`
+3. Custom attributes: `data-*`
+4. Connection attributes: `src`, `for`, `type`, `href`, `value`
+5. Auxiliary attributes: `title`, `alt`
+6. Accessibility attributes: `aria`, `role`
 
 
 ***
@@ -152,7 +151,7 @@ Do not use type attributes for style sheets (unless not using CSS) and scripts (
 
 Specifying type attributes in these contexts is not necessary as HTML5 implies text/css and text/javascript as defaults. This can be safely done even for older browsers.
 
-```
+```html
 <!-- NOT recommended -->
 <link rel="stylesheet" href="//www.google.com/css/maia.css"
     type="text/css">
@@ -161,7 +160,7 @@ Specifying type attributes in these contexts is not necessary as HTML5 implies t
 <link rel="stylesheet" href="//www.google.com/css/maia.css">
 ```
 
-```
+```html
 <!-- No -->
 <script src="//google.com/js/gweb/analytics/autotrack.js"
     type="text/javascript"></script>
